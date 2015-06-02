@@ -25,7 +25,7 @@ case "$1" in
   echo
   echo "-cs <integer> | --char-size <integer>"
   echo "  specify password length"
-  ech
+  echo
   echo "-l <integer> | --lefthand"
   echo "  left handed password"
   echo
