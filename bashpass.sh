@@ -17,14 +17,20 @@ case "$1" in
   ;;
 
   * | -h | --help ) echo
-  echo "BASH PASS HELP"
+  echo "NAME"
+  echo "    bashpass"
   echo
-  echo "-cs <integer> | --char-size <integer> : specify password character size"
+  echo "SYNOPSIS"
+  echo "    bashpass [-h] [--help] [-cs <integer>] [-l] [-lcs]"
   echo
+  echo "-cs <integer> | --char-size <integer>"
+  echo "  specify password length"
+  ech
+  echo "-l <integer> | --lefthand"
+  echo "  left handed password"
   echo
-  echo "-l <integer> | <integer> --lefthand : left handed password"
-  echo
-  echo "-lcs <integer> | --left-char-size <integer> : left hand password with char size"
+  echo "-lcs <integer> | --left-char-size <integer>"
+  echo "  left hand password with length"
   echo
   ;;
 esac
