@@ -1,28 +1,37 @@
 #!/bin/bash
 
 
-usingSHA(){
+shaStatic(){
 #hashes date with SHA
-echo
-echo "32 character password generated using SHA256 with date"
-echo "***************************************************"
-date +%s | sha256sum | base64 | head -c 32 ; echo
-echo "***************************************************"
+  local charSize=20
+  echo
+  echo "${charSize} character password generated using SHA256 with date"
+  echo "***************************************************"
+  date +%s | sha256sum | base64 | head -c ${charSize} ; echo
+  echo "***************************************************"
 }
 
-usingOPENSSL(){
+shaWithNum(){
+  #hashes date with SHA
   echo
-  echo "32 character password generated using openssl"
-  echo "**************************************************"
-  openssl rand -base64 32
-  echo "**************************************************"
+  echo "$1 character password generated using SHA256 with date"
+  echo "***************************************************"
+  date +%s | sha256sum | base64 | head -c $1 ; echo
+  echo "***************************************************"
 }
 
-leftHAND(){
+leftHand(){
   echo
-  echo "8 character password generated using /dev/urandom"
-  echo "Meant to type with left hand"
+  echo "8 character password easy to type with left hand"
   echo "**************************************************"
   </dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c8; echo ""
+  echo "**************************************************"
+}
+
+leftHandNum(){
+  echo
+  echo "$1 character password easy to type with left hand"
+  echo "**************************************************"
+  </dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c$1; echo ""
   echo "**************************************************"
 }
