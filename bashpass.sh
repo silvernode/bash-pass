@@ -21,7 +21,7 @@ case "$1" in
   echo "    bashpass"
   echo
   echo "SYNOPSIS"
-  echo "    bashpass [-h] [--help] [-cs <integer>] [-l] [-lcs]"
+  echo "    bashpass [-h] [--help] [-cs <integer>] [-l] [-lcs <integer>]"
   echo
   echo "-cs <integer> | --char-size <integer>"
   echo "  specify password length"
